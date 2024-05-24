@@ -9,6 +9,22 @@ body.dark-mode {
     
 }
 
+#scroll-to-top {
+    height: 40px;
+    width: 200px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(0, 128, 0, 0.667);
+
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
