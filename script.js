@@ -16,7 +16,8 @@ document.getElementById('theme-switcher').addEventListener('click', function(){
         localStorage.removeItem('thema');
     }
 });
-var scrollToTopButton = document.getElementById('scroll-to-top');
+
+let scrollToTopButton = document.getElementById('scroll-to-top');
 
 window.addEventListener('scroll', function(){
     if(window.scrollY > 200){
@@ -33,9 +34,9 @@ scrollToTopButton.addEventListener('click', function(){
 document.getElementById('contact-form').addEventListener('submit', function(event){
     event.preventDefault();
 
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
 
      // controleer of de naam is ingevuld
      if (name === '') {
@@ -82,10 +83,10 @@ function genereerProjectHTML(project){
     `;
 }
 
-var projectenContainer = document.getElementById('projects');
+let projectenContainer = document.getElementById('projects');
 
 projecten.forEach(function(project) {
-    var projectHTML = genereerProjectHTML(project);
+    let projectHTML = genereerProjectHTML(project);
     projectenContainer.innerHTML += projectHTML;
 });
 
