@@ -88,3 +88,17 @@ console.log(nieuweLeden);
 let {naam: naam1, ...rest} = projecten1;
 console.log(naam1); 
 console.log(rest);
+
+let projectenLijst = [
+    {naam: 'Project A', status: 'In uitvoering', leden: ['Lid1', 'Lid2']},
+    {naam: 'Project B', status: 'Voltooid', leden: ['Lid3', 'Lid4']},
+    {naam: 'Project C', status: 'Niet gestart', leden: ['Lid5', 'Lid6']}
+  ];
+  
+  // Gebruik de forEach()-methode om over de array te itereren
+  projectenLijst.forEach(project => {
+    console.log(`Naam: ${project.naam}`);
+    console.log(`Status: ${project.status}`);
+    console.log(`Leden: ${project.leden.join(', ')}`);
+  });
+  
