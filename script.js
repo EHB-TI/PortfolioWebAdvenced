@@ -74,3 +74,9 @@ projecten.forEach(function(project) {
     var projectHTML = genereerProjectHTML(project);
     projectenContainer.innerHTML += projectHTML;
 });
+
+let projecten1 = {naam: 'Project A', status: 'In uitvoering', leden: ['Lid1', 'Lid2']};
+let {naam, status, leden} = projecten1;
+console.log(naam); 
+console.log(status); 
+console.log(leden); 
