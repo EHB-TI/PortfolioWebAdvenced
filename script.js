@@ -1,7 +1,21 @@
-document.getElementById('theme-switcher').addEventListener('click', function(){
-    document.body.classList.toggle('dark-mode')
-})
+document.addEventListener('DOMContentLoaded', (event) => {
+    const opgeslagenThema = localStorage.getItem('thema');
+    if (opgeslagenThema) {
+        document.body.classList.add(opgeslagenThema);
+    }
+});
 
+document.getElementById('theme-switcher').addEventListener('click', function(){
+    // Schakel tussen de thema's
+    document.body.classList.toggle('dark-mode');
+
+    // Sla het huidige thema op in LocalStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('thema', 'dark-mode');
+    } else {
+        localStorage.removeItem('thema');
+    }
+});
 var scrollToTopButton = document.getElementById('scroll-to-top');
 
 window.addEventListener('scroll', function(){
@@ -130,4 +144,3 @@ const getPosts = async () => {
     }
   })();
 
-  
