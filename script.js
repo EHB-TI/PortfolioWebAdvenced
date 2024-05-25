@@ -44,3 +44,33 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         document.getElementById('message-error').textContent = '';
     }
 });
+
+const projecten = [
+    {
+        titel: 'project 1',
+        beschrijving: 'Dat is project 1.',
+        link:'#'
+    },
+    {
+        titel: 'Project 2',
+        beschrijving: 'Beschrijving van project 2.',
+        link: '#'
+    }
+];
+
+function genereerProjectHTML(project){
+    return`
+    <div class="project-card">
+    <h3>${project.titel}</h3>
+    <p>${project.beschrijving}</p>
+    <a href="${project.link}">GITHUB</a>
+    </div>
+    `;
+}
+
+var projectenContainer = document.getElementById('projects');
+
+projecten.forEach(function(project) {
+    var projectHTML = genereerProjectHTML(project);
+    projectenContainer.innerHTML += projectHTML;
+});
