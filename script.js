@@ -118,5 +118,6 @@ const getPosts = async () => {
   };
   
 
+  getPosts().then(displayPosts).catch(console.error);
   
  
