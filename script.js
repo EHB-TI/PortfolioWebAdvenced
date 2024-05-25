@@ -102,10 +102,21 @@ let projectenLijst = [
     console.log(`Leden: ${project.leden.join(', ')}`);
   });
 
-  // Arrow function
+
 const getPosts = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await response.json();
     return data;
   };
   
+ 
+  const displayPosts = (posts) => {
+    posts.forEach(post => {
+      console.log(`Title: ${post.title}`);
+      console.log(`Body: ${post.body}`);
+    });
+  };
+  
+
+  
+ 
