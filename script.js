@@ -64,12 +64,12 @@ const projecten = [
     {
         titel: 'project 1',
         beschrijving: 'Dat is project 1.',
-        link:'#'
+        link:'https://github.com/'
     },
     {
         titel: 'Project 2',
-        beschrijving: 'Beschrijving van project 2.',
-        link: '#'
+        beschrijving: 'Dat is project 2.',
+        link: 'https://github.com/'
     }
 ];
 
