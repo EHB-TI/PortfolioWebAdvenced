@@ -80,3 +80,11 @@ let {naam, status, leden} = projecten1;
 console.log(naam); 
 console.log(status); 
 console.log(leden); 
+
+let oudeLeden = ['Lid1', 'Lid2'];
+let nieuweLeden = [...oudeLeden, 'Lid3'];
+console.log(nieuweLeden);
+
+let {naam: naam1, ...rest} = projecten1;
+console.log(naam1); 
+console.log(rest);
