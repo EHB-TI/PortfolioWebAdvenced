@@ -102,14 +102,14 @@ let projectenLijst = [
     console.log(`Leden: ${project.leden.join(', ')}`);
   });
 
-
+  // Arrow function
 const getPosts = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await response.json();
     return data;
   };
   
- 
+  // Callback function
   const displayPosts = (posts) => {
     posts.forEach(post => {
       console.log(`Title: ${post.title}`);
@@ -117,7 +117,17 @@ const getPosts = async () => {
     });
   };
   
-
+  // Consumer method (then)
   getPosts().then(displayPosts).catch(console.error);
   
- 
+  // Self-executing function
+  (async () => {
+    try {
+      const posts = await getPosts();
+      displayPosts(posts);
+    } catch (error) {
+      console.error(error);
+    }
+  })();
+  
+  
