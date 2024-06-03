@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const opgeslagenThema = localStorage.getItem('thema');
     if (opgeslagenThema) {
